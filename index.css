@@ -66,3 +66,102 @@ h2 {
 	}
 	
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	
+	h1, h2 {
+		color: orange;
+	}
+	
+}
+
+@media screen and (min-width: 481px) {
+	
+	/* --- Layout a zakladni vzhled --- */
+	
+	body {
+		background: #ccc;
+	}
+	
+	a {
+		color: #5FA316;
+	}
+	
+	h1, h2 {
+		color: #999;
+		font-weight: normal;
+	}
+
+	.container {
+		position: relative;
+		width: 900px;
+		margin: 30px auto;
+		padding-top: 90px;
+		background: #fff;
+	}
+
+	.content {
+		float: left;
+		width: 540px; /* 600px */
+		padding: 0 30px;
+	}
+
+	.side {
+		float: right;
+		width: 240px; /* 300px */
+		padding: 0 30px;
+	}
+
+	.foot {
+		clear: both;
+		padding: 30px;
+		background-color: #eee;
+		color: #999;
+	}
+	
+	.foot p {
+		margin-bottom: 0;
+	}
+
+	.nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 848px; /* 900 */
+		padding: 0 30px 0 22px;
+		background: #333;
+	}
+	
+	.nav h2 {
+		display: none;
+	}
+
+	.nav ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	}  
+
+	.nav li {
+	  display: inline-block;
+	  float: left; /* IE7 */
+	  margin: 0;
+	  padding: 0;
+	}
+
+	.nav a {
+	  display: inline-block;
+	  padding: 20px 10px;
+	  margin-left: -2px;
+	  text-decoration: none;
+	}
+	
+	.nav strong a,
+	.nav a:hover,
+	.nav a:focus,
+	.nav a:active {
+	  color: #fff;
+	}
+	
+	
+} 
