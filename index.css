@@ -94,7 +94,8 @@ h2 {
 
 	.container {
 		position: relative;
-		width: 900px;
+		max-width: 1200px;
+		xxxmin-width: 768px;
 		margin: 30px auto;
 		padding-top: 90px;
 		background: #fff;
@@ -102,14 +103,20 @@ h2 {
 
 	.content {
 		float: left;
-		width: 540px; /* 600px */
-		padding: 0 30px;
+		width: 60%; /* 540/900*100 */
+		padding: 0 3.3333333333%; /* 30/900*100 */
 	}
 
 	.side {
 		float: right;
-		width: 240px; /* 300px */
-		padding: 0 30px;
+		width: 26.666666667%; /* 240/900*100 */
+		padding: 0 3.3333333333%; /* 30/900*100 */
+	}
+	
+	.side img {
+		width: 100%;
+		max-width: 300px;
+		height: auto;
 	}
 
 	.foot {
@@ -127,8 +134,8 @@ h2 {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 848px; /* 900 */
-		padding: 0 30px 0 22px;
+		width: 94.222222222%; /* 848/900*100 */
+		padding: 0 3.3333333333% 0 2.4444444444%; /* 22/900*100 */
 		background: #333;
 	}
 	
