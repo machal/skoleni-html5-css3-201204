@@ -2,13 +2,37 @@
    Stylopis pro testovací stránku školení HTML5/CSS
 	 Autor: Martin Michálek, michalek@shortcat.cz
 */
-
-/* --- Zakladni typografie --- */
-
-body {
-	margin: 20px;
+.clearfix {
+  *zoom: 1;
 }
-
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* --- Zakladni typografie --- */
+body {
+  margin: 20px;
+}
 /* Jednotne parametry pisma */
 body,
 input,
@@ -16,7 +40,6 @@ textarea,
 select {
   font: 15px/20px Georgia, serif;
 }
-
 /* Nastavime rytmus spodnim odsazenim */
 p,
 ul,
@@ -28,7 +51,6 @@ table {
   padding-bottom: 0;
   margin-bottom: 1.5em;
 }
-
 /* U nadpisu bude odsazeni jen polovicni */
 h1,
 h2,
@@ -42,133 +64,124 @@ h6 {
   margin-bottom: .5em;
   font-family: Arial, sans-serif;
 }
-
 /* Ponechan spodni rytmus */
 a img {
   border: 0;
 }
-
 /* Barvy */
 a {
   color: #5FA316;
 }
-
 h1,
 h2 {
   color: #999;
   font-weight: normal;
 }
-
 @media print {
-	
-	.nav {
-		display: none;
-	}
-	
+  .nav {
+    display: none;
+  }
 }
-
 @media screen and (min-width: 320px) and (max-width: 480px) {
-	
-	h1, h2 {
-		color: orange;
-	}
-	
+  h1,
+  h2 {
+    color: orange;
+  }
 }
-
 @media screen and (min-width: 481px) {
-	
-	/* --- Layout a zakladni vzhled --- */
-	
-	body {
-		background: #ccc;
-	}
-	
-	a {
-		color: #5FA316;
-	}
-	
-	h1, h2 {
-		color: #999;
-		font-weight: normal;
-	}
-
-	.container {
-		position: relative;
-		max-width: 1200px;
-		xxxmin-width: 768px;
-		margin: 30px auto;
-		padding-top: 90px;
-		background: #fff;
-	}
-
-	.content {
-		float: left;
-		width: 60%; /* 540/900*100 */
-		padding: 0 3.3333333333%; /* 30/900*100 */
-	}
-
-	.side {
-		float: right;
-		width: 26.666666667%; /* 240/900*100 */
-		padding: 0 3.3333333333%; /* 30/900*100 */
-	}
-	
-	.side img {
-		width: 100%;
-		max-width: 300px;
-		height: auto;
-	}
-
-	.foot {
-		clear: both;
-		padding: 30px;
-		background-color: #eee;
-		color: #999;
-	}
-	
-	.foot p {
-		margin-bottom: 0;
-	}
-
-	.nav {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 94.222222222%; /* 848/900*100 */
-		padding: 0 3.3333333333% 0 2.4444444444%; /* 22/900*100 */
-		background: #333;
-	}
-	
-	.nav h2 {
-		display: none;
-	}
-
-	.nav ul {
-	  list-style-type: none;
-	  margin: 0;
-	  padding: 0;
-	}  
-
-	.nav li {
-	  display: inline-block;
-	  float: left; /* IE7 */
-	  margin: 0;
-	  padding: 0;
-	}
-
-	.nav a {
-	  display: inline-block;
-	  padding: 20px 10px;
-	  margin-left: -2px;
-	  text-decoration: none;
-	}
-	
-	.nav strong a,
-	.nav a:hover,
-	.nav a:focus,
-	.nav a:active {
-	  color: #fff;
-	}
-	
-	
-} 
+  /* --- Layout a zakladni vzhled --- */
+  body {
+    background: #ccc;
+  }
+  a {
+    color: #5FA316;
+  }
+  h1,
+  h2 {
+    color: #999;
+    font-weight: normal;
+  }
+  .container {
+    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+    max-width: 1200px;
+    xxxmin-width: 768px;
+    margin: 30px auto;
+    padding-top: 90px;
+    background: #fff;
+  }
+  .content {
+    float: left;
+    width: 60%;
+    /* 540/900*100 */
+  
+    padding: 0 3.3333333333%;
+    /* 30/900*100 */
+  
+  }
+  .side {
+    float: right;
+    width: 26.666666667%;
+    /* 240/900*100 */
+  
+    padding: 0 3.3333333333%;
+    /* 30/900*100 */
+  
+  }
+  .side img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  .foot {
+    clear: both;
+    padding: 30px;
+    background-color: #eee;
+    color: #999;
+  }
+  .foot p {
+    margin-bottom: 0;
+  }
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 94.222222222%;
+    /* 848/900*100 */
+  
+    padding: 0 3.3333333333% 0 2.4444444444%;
+    /* 22/900*100 */
+  
+    background: #333;
+  }
+  .nav h2 {
+    display: none;
+  }
+  .nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav li {
+    display: inline-block;
+    float: left;
+    /* IE7 */
+  
+    margin: 0;
+    padding: 0;
+  }
+  .nav a {
+    display: inline-block;
+    padding: 20px 10px;
+    margin-left: -2px;
+    text-decoration: none;
+  }
+  .nav strong a,
+  .nav a:hover,
+  .nav a:focus,
+  .nav a:active {
+    color: #fff;
+  }
+}
